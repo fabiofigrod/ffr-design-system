@@ -7,7 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "lib:build": "ng build ffr-design --prod",
+    "schematics:build": "cd projects\\ffr-design && npm run build",
+    "lib:link": "npm link dist\\ffr-design",
+    "lib:full-build": "npm run lib:build && npm run schematics:build && npm run lib:link",
+    "lib:package": "cd dist\\ffr-design && npm pack"
   },
   "private": true,
   "dependencies": {

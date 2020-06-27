@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add the library to the project",
+      "factory": "./ng-add/index#ngAdd"
+    },
+    "my-test": {
+      "description": "Add the file hello.txt just for test purpose",
+      "factory": "./ng-generate/my-test/index#myTest",
+      "schema": "./ng-generate/my-test/schema.json"
+    }
+  }
+}

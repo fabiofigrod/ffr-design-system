@@ -1,6 +1,13 @@
 {
   "name": "ffr-design",
   "version": "0.0.1",
+  "schematics": "./schematics/collection.json",
+  "scripts": {
+    "build": "..\\..\\node_modules\\.bin\\tsc -p tsconfig.schematics.json",
+    "copy:schema": "copy schematics\\ng-generate\\my-test\\schema.json ..\\..\\dist\\ffr-design\\schematics\\ng-generate\\my-test\\schema.json",
+    "copy:collection": "copy schematics\\collection.json ..\\..\\dist\\ffr-design\\schematics\\collection.json",
+    "postbuild": "npm run copy:schema && npm run copy:collection"
+  },
   "peerDependencies": {
     "@angular/common": "^10.0.0",
     "@angular/core": "^10.0.0"

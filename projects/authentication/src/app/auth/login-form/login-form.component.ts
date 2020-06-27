@@ -3,16 +3,16 @@ import { AuthService } from '../auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Credentials } from '../models/credentials';
-import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
-  selector: 'ffr-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'ffr-login-form',
+  templateUrl: './login-form.component.html',
+  styleUrls: ['./login-form.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginFormComponent implements OnInit {
   loginForm: FormGroup;
   message: string;
+  isLoggingIn = false;
 
   constructor(
     private authService: AuthService,
@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(credentials: Credentials): void {
+    this.isLoggingIn = true;
     this.authService.login(credentials).subscribe(
       () => {
         if (this.authService.isLoggedIn) {
@@ -41,6 +42,7 @@ export class LoginComponent implements OnInit {
         }
       },
       (err) => {
+        this.isLoggingIn = false;
         switch (err.status) {
           case 400:
             this.message = 'Incorrect credentials.';
@@ -49,6 +51,9 @@ export class LoginComponent implements OnInit {
             this.message = 'Something went wrong.';
             break;
         }
+      },
+      () => {
+        this.isLoggingIn = false;
       }
     );
   }
@@ -57,3 +62,4 @@ export class LoginComponent implements OnInit {
     this.authService.logout();
   }
 }
+

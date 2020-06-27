@@ -36,9 +36,7 @@
               "projects/ffr-design/tsconfig.lib.json",
               "projects/ffr-design/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -67,9 +65,7 @@
               "projects/show-room/src/favicon.ico",
               "projects/show-room/src/assets"
             ],
-            "styles": [
-              "projects/show-room/src/styles.scss"
-            ],
+            "styles": ["projects/show-room/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -131,9 +127,7 @@
               "projects/show-room/src/favicon.ico",
               "projects/show-room/src/assets"
             ],
-            "styles": [
-              "projects/show-room/src/styles.scss"
-            ],
+            "styles": ["projects/show-room/src/styles.scss"],
             "scripts": []
           }
         },
@@ -145,9 +139,7 @@
               "projects/show-room/tsconfig.spec.json",
               "projects/show-room/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -188,9 +180,7 @@
               "projects/authentication/src/favicon.ico",
               "projects/authentication/src/assets"
             ],
-            "styles": [
-              "projects/authentication/src/styles.scss"
-            ],
+            "styles": ["projects/authentication/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -252,9 +242,7 @@
               "projects/authentication/src/favicon.ico",
               "projects/authentication/src/assets"
             ],
-            "styles": [
-              "projects/authentication/src/styles.scss"
-            ],
+            "styles": ["projects/authentication/src/styles.scss"],
             "scripts": []
           }
         },
@@ -266,9 +254,7 @@
               "projects/authentication/tsconfig.spec.json",
               "projects/authentication/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -284,6 +270,7 @@
           }
         }
       }
-    }},
-  "defaultProject": "ffr-design"
+    }
+  },
+  "defaultProject": "show-room"
 }

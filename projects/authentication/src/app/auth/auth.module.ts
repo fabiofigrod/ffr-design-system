@@ -5,13 +5,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AuthRoutingModule } from './auth-routing.module';
-import { LoginComponent } from './login/login.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginFormComponent, LoginPageComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -19,12 +22,16 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatIconModule
   ],
   exports: [
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatIconModule
   ]
 })
 export class AuthModule { }

@@ -21,6 +21,15 @@
     },
     {
       "path": "./projects/show-room/e2e/tsconfig.json"
+    },
+    {
+      "path": "./projects/authentication/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/authentication/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/authentication/e2e/tsconfig.json"
     }
 ]
 }

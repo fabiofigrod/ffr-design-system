@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  authentication: {
+    host: {
+      login: 'http://localhost:5000/auth/login',
+      verifyToken: 'http://localhost:5000/auth/verifyToken'
+    }
+  }
 };
 
 /*

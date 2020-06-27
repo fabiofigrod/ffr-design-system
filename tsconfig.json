@@ -6,5 +6,21 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/ffr-design/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ffr-design/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/show-room/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/show-room/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/show-room/e2e/tsconfig.json"
+    }
+]
 }
